@@ -4,20 +4,20 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Destinations — SafarNama</title>
-  <link rel="stylesheet" href="assets/base.css"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <main class="container">
-    <section>
-      <h1 class="title">Destinations</h1>
-      <p class="muted">Explore Pakistan’s top destinations.</p>
-      <div class="grid cols-3" id="destinationsGrid"></div>
+    <section id="destinations">
+      <h1 class="title reveal" style="font-size:36px">Destinations</h1>
+      <p class="muted reveal" style="margin:0 0 12px;max-width:700px">Filter by region and search to find your next stop.</p>
+      <div class="row cols-2" style="margin:12px 0">
+        <input id="search" placeholder="Search places…"/>
+        <select id="region"></select>
+      </div>
+      <div id="destGrid" class="grid cols-3"></div>
     </section>
   </main>
-
-  <script src="assets/global.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
-
