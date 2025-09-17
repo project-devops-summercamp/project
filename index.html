@@ -4,11 +4,12 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>SafarNama — Pakistan Tours</title>
-  <link rel="stylesheet" href="assets/base.css"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <meta name="description" content="Pakistan travel guide: destinations, itineraries, stories, contact."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <main class="container">
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-inner">
         <h1 class="title reveal">Discover Pakistan</h1>
@@ -18,24 +19,92 @@
           <a class="btn" href="trip-plans.html">Build a Trip</a>
         </div>
       </div>
-      <div class="orb"></div>
-      <div class="orb o2"></div>
     </section>
 
+    <!-- FEATURED PLACES -->
     <section aria-label="Featured Places">
-      <h2 class="reveal">Featured Places</h2>
-      <p class="muted reveal">North to South—crowd favorites and hidden gems.</p>
-      <div id="featured" class="grid cols-4"></div>
+      <h2 class="reveal" style="margin:0 0 6px;font-size:28px;font-weight:800">Featured Places</h2>
+      <p class="muted reveal" style="margin:0 0 16px;max-width:700px">North to South—crowd favorites and hidden gems.</p>
+      <div class="grid cols-4">
+        <article class="card reveal">
+          <img class="thumb" src="images/hunza_final.jpeg" alt="Hunza Valley"/>
+          <div class="card-body">
+            <h3>Hunza Valley</h3>
+            <p class="muted">Snow-capped peaks, apricot blossoms, and legendary hospitality.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="images/skardu_final.jpeg" alt="Skardu"/>
+          <div class="card-body">
+            <h3>Skardu</h3>
+            <p class="muted">Gateway to K2, Shigar Fort, and the surreal Katpana Desert.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="images/lahore_final.jpeg" alt="Lahore"/>
+          <div class="card-body">
+            <h3>Lahore</h3>
+            <p class="muted">History, food streets, and Mughal architecture at its finest.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="images/karachi_final.jpeg" alt="Karachi"/>
+          <div class="card-body">
+            <h3>Karachi</h3>
+            <p class="muted">Seaview sunsets, vibrant bazaars, and coastal escapes.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
+    <!-- SEASONS -->
     <section aria-label="Best Seasons">
-      <h2 class="reveal">When to go</h2>
-      <div id="seasons" class="grid cols-4"></div>
+      <h2 class="reveal" style="margin:10px 0 6px;font-size:28px;font-weight:800">When to go</h2>
+      <div class="grid cols-4">
+        <article class="card reveal">
+          <img class="thumb" src="images/spring_final.jpeg" alt="Spring"/>
+          <div class="card-body"><h3>Spring</h3><p class="muted">Apricot blossoms in Hunza, cool breezes in Swat.</p></div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600&auto=format&fit=crop" alt="Summer"/>
+          <div class="card-body"><h3>Summer</h3><p class="muted">Escape to Gilgit-Baltistan’s alpine lakes and valleys.</p></div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop" alt="Autumn"/>
+          <div class="card-body"><h3>Autumn</h3><p class="muted">Golden poplars, clear skies, and calm trekking trails.</p></div>
+        </article>
+        <article class="card reveal">
+          <img class="thumb" src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=600&auto=format&fit=crop" alt="Winter"/>
+          <div class="card-body"><h3>Winter</h3><p class="muted">Snow festivals, cozy lodges, and frozen lakes in Skardu.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY PAKISTAN -->
+    <section aria-label="Why Pakistan">
+      <h2 class="reveal" style="margin:10px 0 6px;font-size:28px;font-weight:800">Why travel with SafarNama</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <div class="card-body">
+            <h3>Real, local intel</h3>
+            <p class="muted">We track pass openings (Babusar, Khunjerab), seasonal roadworks, and festivals to time your trip perfectly.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-body">
+            <h3>Safety & logistics</h3>
+            <p class="muted">Licensed 4x4 drivers for Fairy Meadows/Deosai. Backup buffers for landslides and weather.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-body">
+            <h3>Authentic stays</h3>
+            <p class="muted">From Hunza heritage lodges to coastal camps near Kund Malir—handpicked and vetted.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
-
-  <script src="assets/global.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
-
