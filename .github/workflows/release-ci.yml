@@ -1,4 +1,4 @@
-name: Develop CI
+name: Release CI
 
 on:
   push:
@@ -17,4 +17,3 @@ jobs:
 
       - name: Run Stylelint
         run: npx stylelint "**/*.css"
-
