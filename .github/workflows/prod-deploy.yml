@@ -1,0 +1,16 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ "production" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production-env   # 🔹 create this environment in GitHub > Settings > Environments
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to Production
+        run: echo "Deploying to ${{ vars.SERVER_URL }}"
+
