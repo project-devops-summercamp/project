@@ -13,3 +13,4 @@ jobs:
 
       - name: Deploy to Production
         run: echo "Deploying to ${{ vars.SERVER_URL }}"
+
