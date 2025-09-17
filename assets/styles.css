@@ -1,85 +1,126 @@
-/* ===========================
-   Student 1: Home + Contact
-=========================== */
+:root{
+  --bg:#0b0b0c; --panel:#0f1115; --text:#e5f0ff; --muted:#a0a8b5;
+  --brand:#10b981; --brand-2:#34d399; --border:#1f2430; --hover:#161a22;
+  --card:#0f1218; --ring:#22d3ee; --danger:#ef4444;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 0% -10%, #10b98122, transparent 60%), var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+header{
+  position:sticky; top:0; z-index:50;
+  background:linear-gradient(180deg, rgba(8,10,12,.9), rgba(8,10,12,.6));
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.2px}
+.brand-icon{
+  width:26px;height:26px;border-radius:8px;
+  background: conic-gradient(from 0deg, var(--brand), var(--brand-2), #60a5fa, var(--brand));
+  box-shadow: 0 0 0 2px #0a0a0a, 0 0 30px #10b98133;
+}
+.links{display:none;gap:6px}
+.links a{padding:8px 12px;border-radius:10px;color:#d1dee9}
+.links a[aria-current="page"], .links a:hover{background:#ffffff12;color:#d1fae5;outline:1px solid #ffffff10}
+.tools{display:flex;gap:8px;align-items:center}
+.btn{
+  border:1px solid var(--border); background:#ffffff10; color:var(--text);
+  padding:10px 14px; border-radius:14px; cursor:pointer; font-weight:600;
+  transition:.25s transform,.25s background,.25s box-shadow;
+}
+.btn:hover{background:#ffffff18; transform: translateY(-1px)}
+.btn.primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#052e2b; border-color:#0000}
+.btn.primary:hover{filter:brightness(1.05)}
+main{padding:40px 0}
+footer{border-top:1px solid var(--border);margin-top:40px}
+footer .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:22px 0;color:#cbd5e1}
 
-/* ==== HOME (Hero Section) ==== */
-.hero {
+/* Sections */
+section{margin-bottom:44px}
+h1.title{font-size:44px;line-height:1.05;margin:0 0 10px;font-weight:1000;letter-spacing:.3px}
+.lead{max-width:720px;color:#cbd5e1;font-size:18px}
+
+/* HERO */
+.hero{
   position:relative; border:1px solid var(--border); border-radius:28px; overflow:hidden;
   background: radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,.12), transparent 60%);
   isolation:isolate;
 }
-.hero::before {
+.hero::before{
   content:""; position:absolute; inset:0;
-  background:url('https://images.unsplash.com/photo-1548786811-ff14170c4b36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-  opacity:.18; z-index:-1;
+  background:url('https://images.unsplash.com/photo-1548786811-ff14170c4b36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; opacity:.18; z-index:-1;
+  pointer-events:none; /* ✅ fix */
 }
-.hero .orb {
+.hero .orb{
   position:absolute; width:420px; height:420px; border-radius:50%;
   background: radial-gradient(circle at 30% 30%, #34d39955, transparent 60%);
   filter: blur(40px); animation: float 12s ease-in-out infinite;
-  pointer-events:none;
+  pointer-events:none; /* ✅ fix */
 }
-.hero .orb.o2 {
-  left:auto; right:-120px; top:-60px;
-  background: radial-gradient(circle at 60% 40%, #22d3ee55, transparent 60%);
-  animation-duration:16s;
-}
-@keyframes float {0%,100%{transform:translateY(0)} 50%{transform:translateY(24px)}}
-.hero-inner {position:relative; padding:68px 24px}
-.actions {margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+.hero .orb.o2{left:auto; right:-120px; top:-60px; background: radial-gradient(circle at 60% 40%, #22d3ee55, transparent 60%); animation-duration: 16s}
+@keyframes float { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(24px) } }
 
-/* ==== CONTACT PAGE ==== */
-input,textarea,select {
-  width:100%; background:#0e0f13; border:1px solid var(--border);
-  color:var(--text); padding:11px 12px; border-radius:12px; outline:none;
-}
-input:focus,textarea:focus,select:focus {
-  box-shadow:0 0 0 3px #22d3ee33; border-color:#22d3ee66;
-}
-textarea {min-height:160px}
-.contact-success {
-  display:none; color:#a7f3d0; font-weight:600; margin-top:10px;
-}
+.hero-inner{position:relative;padding:68px 24px}
+.actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
 
-/* ==== STORIES PAGE ==== */
-.card {
+/* Grid */
+.grid{display:grid;gap:18px}
+@media (min-width:768px){
+  .links{display:flex}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+}
+.card{
   background:linear-gradient(180deg,#0e1117,#0b0d12);
   border:1px solid var(--border); border-radius:18px; overflow:hidden;
   transition: transform .2s ease, box-shadow .3s ease, border-color .2s ease;
   box-shadow: 0 10px 30px #00000050;
+  transform-style: preserve-3d; will-change: transform;
 }
-.card:hover {transform: translateY(-4px); border-color:#2b3244}
-.thumb {aspect-ratio:16/9; width:100%; object-fit:cover; display:block}
-.card-body {padding:14px}
-.chip {display:inline-block; background:#ffffff10; border:1px solid #ffffff25; color:#a7f3d0; padding:2px 8px; border-radius:999px; font-size:12px}
-.meta {display:flex; gap:10px; flex-wrap:wrap; font-size:13px; color:#a3bacd}
+.card:hover{transform: translateY(-4px); border-color:#2b3244}
+.thumb{aspect-ratio:16/9;width:100%;object-fit:cover;display:block; transform: translateZ(0.01px)}
+.card-body{padding:14px}
+.chip{display:inline-block;background:#ffffff10;border:1px solid #ffffff25;color:#a7f3d0;padding:2px 8px;border-radius:999px;font-size:12px}
+.muted{color:#9aa4b2}
+.meta{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;color:#a3bacd}
 
-/* ==== TRIP PLANS PAGE ==== */
-#plansGrid .card-body h3 {margin:0 0 4px; font-size:18px}
-#plansGrid .card-body p {margin:0; color:#cbd5e1; font-size:14px}
+/* Badges */
+.badge-row{display:flex;gap:8px;flex-wrap:wrap}
+.badge{background:#ffffff10;border:1px solid #ffffff18;border-radius:999px;padding:6px 10px;color:#e2e8f0;font-size:13px}
 
+/* Forms */
+input,textarea,select{width:100%;background:#0e0f13;border:1px solid var(--border);color:var(--text);padding:11px 12px;border-radius:12px;outline:none}
+input:focus,textarea:focus,select:focus{box-shadow:0 0 0 3px #22d3ee33;border-color:#22d3ee66}
+textarea{min-height:160px}
+.row{display:grid;gap:12px}
+@media (min-width:768px){.row.cols-2{grid-template-columns:repeat(2,1fr)}}
 
+/* Reveal animation — DISABLED */
+.reveal{opacity:1;transform:translateY(0);transition:none}
+.reveal.show{opacity:1;transform:translateY(0)}
 
-/* ===========================
-   Student 3: Destinations + About
-=========================== */
+/* Parallax */
+.parallax{transform:translateY(var(--parallax,0px)); transition: transform .1s}
 
-/* ==== DESTINATIONS PAGE ==== */
-#destinationsGrid .card-body h3 {
-  margin:0 0 4px; font-size:18px; font-weight:700;
-}
-#destinationsGrid .card-body p {
-  margin:0; font-size:14px; color:#cbd5e1;
-}
+/* Tilt hover */
+[data-tilt]{--rx:0deg; --ry:0deg; transform: perspective(800px) rotateX(var(--rx)) rotateY(var(--ry)); transition: transform .15s ease}
+[data-tilt]:hover{transition: transform .03s ease}
 
-/* ==== ABOUT PAGE ==== */
-.about-section {
-  max-width:800px; margin:auto; text-align:center; padding:40px 0;
-}
-.about-section h2 {
-  font-size:28px; font-weight:800; margin-bottom:16px;
-}
-.about-section p {
-  color:#cbd5e1; line-height:1.6;
-}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:#000a;backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:100}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:80vh;border-radius:12px;border:1px solid var(--border)}
+.lightbox .ctrl{position:absolute;top:50%;transform:translateY(-50%);padding:10px 14px;border-radius:12px;background:#111a;border:1px solid var(--border);cursor:pointer}
+.lightbox .prev{left:20px}.lightbox .next{right:20px}
+.lightbox .close{top:20px;right:20px;transform:none}
 
+/* Utility */
+.hidden{display:none}
