@@ -1,23 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Travel Stories — SafarNama</title>
-  <link rel="stylesheet" href="assets/base.css"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <main class="container">
     <section id="stories">
       <h1 class="title reveal" style="font-size:36px">Travel Stories</h1>
-      <p class="muted reveal">Real travelers, real moments.</p>
-      <div class="grid cols-3" id="storiesGrid"></div>
+      <p class="muted reveal" style="margin:0 0 12px">Real travelers, real moments.</p>
+
+      <div class="grid cols-3" id="storiesGrid">
+
+        <!-- Story 1 -->
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="https://images.unsplash.com/photo-1600047508943-7cb7f2a26c5e?q=80&w=1000&auto=format&fit=crop" alt="Hunza Valley"/>
+          <div class="card-body">
+            <span class="chip">Hunza Valley</span>
+            <h3>A Road to the Clouds</h3>
+            <p class="muted">“On the Karakoram Highway, every bend felt like a new painting. I shared apricots with locals and watched Rakaposhi glow at sunset.”</p>
+            <div class="meta"><span>By Ayesha</span><span>Summer 2023</span></div>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="https://images.unsplash.com/photo-1593357848331-c1f6b1d79cd6?q=80&w=1000&auto=format&fit=crop" alt="Lahore"/>
+          <div class="card-body">
+            <span class="chip">Lahore</span>
+            <h3>Where History Breathes</h3>
+            <p class="muted">“Walking through the Walled City, the aroma of kebabs mixed with the call of the azan. Every brick of Shahi Qila told a story of empires.”</p>
+            <div class="meta"><span>By Hamza</span><span>Spring 2022</span></div>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="https://images.unsplash.com/photo-1590419387893-ec2c82d6a9a6?q=80&w=1000&auto=format&fit=crop" alt="Skardu"/>
+          <div class="card-body">
+            <span class="chip">Skardu</span>
+            <h3>Camping by the Cold Desert</h3>
+            <p class="muted">“At night, stars blanketed the sky over Katpana Desert. The silence was so complete I could hear the Indus river flowing in the distance.”</p>
+            <div class="meta"><span>By Fatima</span><span>Autumn 2021</span></div>
+          </div>
+        </article>
+
+      </div>
     </section>
   </main>
-
-  <script src="assets/global.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
-
