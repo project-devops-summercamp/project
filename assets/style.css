@@ -1,0 +1,43 @@
+/* ===========================
+   Student 1: Home + Contact
+=========================== */
+
+/* ==== HOME (Hero Section) ==== */
+.hero {
+  position:relative; border:1px solid var(--border); border-radius:28px; overflow:hidden;
+  background: radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,.12), transparent 60%);
+  isolation:isolate;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background:url('https://images.unsplash.com/photo-1548786811-ff14170c4b36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  opacity:.18; z-index:-1;
+}
+.hero .orb {
+  position:absolute; width:420px; height:420px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #34d39955, transparent 60%);
+  filter: blur(40px); animation: float 12s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero .orb.o2 {
+  left:auto; right:-120px; top:-60px;
+  background: radial-gradient(circle at 60% 40%, #22d3ee55, transparent 60%);
+  animation-duration:16s;
+}
+@keyframes float {0%,100%{transform:translateY(0)} 50%{transform:translateY(24px)}}
+.hero-inner {position:relative; padding:68px 24px}
+.actions {margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+
+/* ==== CONTACT PAGE ==== */
+input,textarea,select {
+  width:100%; background:#0e0f13; border:1px solid var(--border);
+  color:var(--text); padding:11px 12px; border-radius:12px; outline:none;
+}
+input:focus,textarea:focus,select:focus {
+  box-shadow:0 0 0 3px #22d3ee33; border-color:#22d3ee66;
+}
+textarea {min-height:160px}
+.contact-success {
+  display:none; color:#a7f3d0; font-weight:600; margin-top:10px;
+}
+
