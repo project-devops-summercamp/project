@@ -1,10 +1,10 @@
-name: Develop CI
+name: Production CI
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "production" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "production" ]
 
 jobs:
   ci:
@@ -17,4 +17,3 @@ jobs:
 
       - name: Run Stylelint
         run: npx stylelint "**/*.css"
-
