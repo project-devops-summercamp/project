@@ -3,21 +3,81 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Trip Plans — SafarNama</title>
-  <link rel="stylesheet" href="assets/base.css"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <title>Trip Plan Guide — SafarNama</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <main class="container">
-    <section>
-      <h1 class="title">Sample Itineraries</h1>
-      <p class="muted">Ready-made plans to inspire your adventure.</p>
-      <div class="grid cols-2" id="plansGrid"></div>
+    <section id="trip-plans">
+      <h1 class="title reveal" style="font-size:36px">Trip Plan Guide</h1>
+      <p class="muted reveal" style="margin:0 0 16px">Curated, realistic itineraries with seasons, altitude, and travel timings in mind.</p>
+      <div class="grid cols-2">
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="images/hunza_top_final.jpeg" alt="Hunza"/>
+          <div class="card-body">
+            <h3 style="margin:0 0 6px">7-Day Northern Highlights (Hunza + Naran)</h3>
+            <ul class="muted" style="padding-left:18px;line-height:1.7">
+              <li><b>Day 1:</b> Islamabad → Naran (7–9 hrs via Hazara). River Kunhar.</li>
+              <li><b>Day 2:</b> Naran → Babusar Top (seasonal) → Hunza (6–8 hrs). Eagle’s Nest.</li>
+              <li><b>Day 3:</b> Attabad Lake boats + Hussaini Bridge + Passu Cones.</li>
+              <li><b>Day 4:</b> Baltit & Altit Forts; apricot dishes in Karimabad.</li>
+              <li><b>Day 5:</b> Khunjerab Pass (if open) or Hopper Glacier.</li>
+              <li><b>Day 6:</b> Return to Naran. Lake Saif‑ul‑Mulook jeep trip.</li>
+              <li><b>Day 7:</b> Naran → Islamabad (8–10 hrs). Buffer day.</li>
+            </ul>
+            <p class="muted"><b>Season:</b> Jun–Sep • <b>Notes:</b> Layers; fast‑changing conditions.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="images/makran_final.jpg" alt="Makran"/>
+          <div class="card-body">
+            <h3 style="margin:0 0 6px">10-Day Heritage & Coast (Lahore → Karachi → Makran)</h3>
+            <ul class="muted" style="padding-left:18px;line-height:1.7">
+              <li><b>Days 1‑2:</b> Lahore: Badshahi Mosque, Fort, Food Street.</li>
+              <li><b>Day 3:</b> Fly/train to Karachi. Clifton sunset + seafood.</li>
+              <li><b>Day 4:</b> Quaid’s Mausoleum, Mohatta, Empress Market.</li>
+              <li><b>Day 5:</b> Churna Island snorkel or Manora beach.</li>
+              <li><b>Day 6:</b> Karachi → Kund Malir (Hingol NP). Princess of Hope.</li>
+              <li><b>Day 7:</b> Kund Malir → Gwadar. Hammerhead, Koh‑e‑Battil.</li>
+              <li><b>Day 8:</b> Optional Astola Island (weather permitting).</li>
+              <li><b>Day 9:</b> Return to Karachi with photo stops.</li>
+              <li><b>Day 10:</b> Buffer/shopping.</li>
+            </ul>
+            <p class="muted"><b>Season:</b> Nov–Mar • <b>Notes:</b> Fuel stops & advisories for MCH.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="images/swat_final.jpg" alt="Swat"/>
+          <div class="card-body">
+            <h3 style="margin:0 0 6px">5-Day Swat Sampler (Malam Jabba + Kalam)</h3>
+            <ul class="muted" style="padding-left:18px;line-height:1.7">
+              <li><b>Day 1:</b> Islamabad → Mingora (5–6 hrs). Fizagat Park.</li>
+              <li><b>Day 2:</b> Malam Jabba chairlifts; view points & zip line.</li>
+              <li><b>Day 3:</b> Mingora → Kalam (5–6 hrs). Ushu Forest.</li>
+              <li><b>Day 4:</b> Mahodand Lake jeep trip (seasonal).</li>
+              <li><b>Day 5:</b> Return to Islamabad.</li>
+            </ul>
+            <p class="muted"><b>Season:</b> Apr–Oct • <b>Notes:</b> Mountain roads; prefer daylight driving.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <img class="thumb" src="images/lahore_final.jpg" alt="Lahore"/>
+          <div class="card-body">
+            <h3 style="margin:0 0 6px">3-Day Lahore Heritage & Food</h3>
+            <ul class="muted" style="padding-left:18px;line-height:1.7">
+              <li><b>Day 1:</b> Badshahi Mosque, Fort, Walled City walking tour.</li>
+              <li><b>Day 2:</b> Museum, Shalimar Gardens; night food tour (Gawalmandi/Anarkali).</li>
+              <li><b>Day 3:</b> Wagah ceremony (PM). Shopping on MM Alam.</li>
+            </ul>
+            <p class="muted"><b>Season:</b> Oct–Mar • <b>Notes:</b> Fridays crowded at Badshahi; dress modestly.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
-
-  <script src="assets/global.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
-
