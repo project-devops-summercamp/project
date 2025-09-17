@@ -41,3 +41,22 @@ textarea {min-height:160px}
   display:none; color:#a7f3d0; font-weight:600; margin-top:10px;
 }
 
+/* ==== STORIES PAGE ==== */
+.card {
+  background:linear-gradient(180deg,#0e1117,#0b0d12);
+  border:1px solid var(--border); border-radius:18px; overflow:hidden;
+  transition: transform .2s ease, box-shadow .3s ease, border-color .2s ease;
+  box-shadow: 0 10px 30px #00000050;
+}
+.card:hover {transform: translateY(-4px); border-color:#2b3244}
+.thumb {aspect-ratio:16/9; width:100%; object-fit:cover; display:block}
+.card-body {padding:14px}
+.chip {display:inline-block; background:#ffffff10; border:1px solid #ffffff25; color:#a7f3d0; padding:2px 8px; border-radius:999px; font-size:12px}
+.meta {display:flex; gap:10px; flex-wrap:wrap; font-size:13px; color:#a3bacd}
+
+/* ==== TRIP PLANS PAGE ==== */
+#plansGrid .card-body h3 {margin:0 0 4px; font-size:18px}
+#plansGrid .card-body p {margin:0; color:#cbd5e1; font-size:14px}
+
+
+
