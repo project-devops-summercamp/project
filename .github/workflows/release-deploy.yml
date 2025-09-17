@@ -1,0 +1,15 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [ "release" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: staging-env   # 🔹 make sure you created this in GitHub Settings > Environments
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to Staging
+        run: echo "Deploying to ${{ vars.SERVER_URL }}"
