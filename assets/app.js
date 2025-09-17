@@ -72,3 +72,32 @@ function hydrateTripPlans() {
 }
 hydrateTripPlans();
 
+/* ===========================
+   Student 3: Destinations + About
+=========================== */
+
+// ==== DESTINATIONS PAGE ====
+function hydrateDestinations() {
+  const grid = document.querySelector("#destinationsGrid");
+  if (grid) {
+    grid.innerHTML = `
+      <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800" alt="Fairy Meadows"/><div class="card-body"><h3>Fairy Meadows</h3><p>Base camp of Nanga Parbat with breathtaking meadows.</p></div></article>
+      <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800" alt="Khunjerab Pass"/><div class="card-body"><h3>Khunjerab Pass</h3><p>World’s highest paved border crossing at 4,700m.</p></div></article>
+      <article class="card"><img class="thumb" src="https://images.unsplash.com/photo-1574323347407-23d3a82d12d9?q=80&w=800" alt="Neelum Valley"/><div class="card-body"><h3>Neelum Valley</h3><p>Lush green valleys, rivers, and mountain villages.</p></div></article>
+    `;
+  }
+}
+hydrateDestinations();
+
+// ==== ABOUT PAGE ====
+function hydrateAbout() {
+  const section = document.querySelector(".about-section");
+  if (section) {
+    section.innerHTML = `
+      <h2>About SafarNama</h2>
+      <p>SafarNama is built by travelers for travelers. Our mission is to connect you with real local insights, curated itineraries, and hidden gems across Pakistan. From the Karakoram to the Arabian Sea, we help you plan authentic journeys with confidence.</p>
+    `;
+  }
+}
+hydrateAbout();
+
