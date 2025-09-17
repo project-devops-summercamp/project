@@ -4,27 +4,38 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Contact — SafarNama</title>
-  <link rel="stylesheet" href="assets/base.css"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
   <main class="container">
-    <section>
-      <h1 class="title">Contact Us</h1>
-      <p class="muted">We’d love to hear from you. Drop us a message.</p>
-      <form>
-        <div class="row cols-2">
-          <input type="text" placeholder="Your Name" required/>
-          <input type="email" placeholder="Your Email" required/>
+    <section id="contact">
+      <h1 class="title reveal" style="font-size:36px">Contact Us</h1>
+      <p class="muted reveal" style="margin:0 0 12px">Ask anything—routes, seasons, safety, or custom itineraries.</p>
+      <div class="grid cols-2" style="gap:18px">
+        <form id="contactForm" class="card">
+          <div class="card-body">
+            <div class="row cols-2">
+              <input required placeholder="Your name"/>
+              <input required type="email" placeholder="Email address"/>
+            </div>
+            <input placeholder="Phone / WhatsApp (optional)" style="margin-top:12px"/>
+            <textarea required placeholder="Tell us about your trip (dates, group size, interests)" style="margin-top:12px"></textarea>
+            <button class="btn primary" style="margin-top:12px" type="submit">Send message</button>
+            <p id="sentMsg" class="muted hidden" style="margin-top:8px;color:#86efac">Thanks! We’ll reply within 24 hours.</p>
+          </div>
+        </form>
+        <div class="card">
+          <div class="card-body">
+            <p><b>Email:</b> hello@safarnama.pk</p>
+            <p><b>Phone:</b> +92 300 0000000</p>
+            <p><b>Location:</b> Islamabad, Pakistan</p>
+            <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
+            <p class="muted">We recommend windows based on weather, road openings, and festival calendars (Eid, blossom, snow). For high-altitude trips (&gt;3,000 m), keep one acclimatization day.</p>
+          </div>
         </div>
-        <textarea placeholder="Your Message" required></textarea>
-        <button class="btn primary" type="submit">Send</button>
-      </form>
+      </div>
     </section>
   </main>
-
-  <script src="assets/global.js" defer></script>
   <script src="assets/app.js" defer></script>
 </body>
 </html>
-
