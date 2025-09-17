@@ -1,16 +1,15 @@
-name: Deploy to staging
+name: Deploy to Development
 
 on:
   push:
-    branches: [ "release" ]
+    branches: [ "develop" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: staging-env
+    environment: development-env
     steps:
       - uses: actions/checkout@v3
 
-      - name: Deploy to staging
-        run: echo "staging to ${{ vars.SERVER_URL }}"
-
+      - name: Deploy to Development
+        run: echo "Deploying to ${{ vars.SERVER_URL }}"
