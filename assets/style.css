@@ -1,0 +1,85 @@
+/* ===========================
+   Student 1: Home + Contact
+=========================== */
+
+/* ==== HOME (Hero Section) ==== */
+.hero {
+  position:relative; border:1px solid var(--border); border-radius:28px; overflow:hidden;
+  background: radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,.12), transparent 60%);
+  isolation:isolate;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background:url('https://images.unsplash.com/photo-1548786811-ff14170c4b36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  opacity:.18; z-index:-1;
+}
+.hero .orb {
+  position:absolute; width:420px; height:420px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #34d39955, transparent 60%);
+  filter: blur(40px); animation: float 12s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero .orb.o2 {
+  left:auto; right:-120px; top:-60px;
+  background: radial-gradient(circle at 60% 40%, #22d3ee55, transparent 60%);
+  animation-duration:16s;
+}
+@keyframes float {0%,100%{transform:translateY(0)} 50%{transform:translateY(24px)}}
+.hero-inner {position:relative; padding:68px 24px}
+.actions {margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+
+/* ==== CONTACT PAGE ==== */
+input,textarea,select {
+  width:100%; background:#0e0f13; border:1px solid var(--border);
+  color:var(--text); padding:11px 12px; border-radius:12px; outline:none;
+}
+input:focus,textarea:focus,select:focus {
+  box-shadow:0 0 0 3px #22d3ee33; border-color:#22d3ee66;
+}
+textarea {min-height:160px}
+.contact-success {
+  display:none; color:#a7f3d0; font-weight:600; margin-top:10px;
+}
+
+/* ==== STORIES PAGE ==== */
+.card {
+  background:linear-gradient(180deg,#0e1117,#0b0d12);
+  border:1px solid var(--border); border-radius:18px; overflow:hidden;
+  transition: transform .2s ease, box-shadow .3s ease, border-color .2s ease;
+  box-shadow: 0 10px 30px #00000050;
+}
+.card:hover {transform: translateY(-4px); border-color:#2b3244}
+.thumb {aspect-ratio:16/9; width:100%; object-fit:cover; display:block}
+.card-body {padding:14px}
+.chip {display:inline-block; background:#ffffff10; border:1px solid #ffffff25; color:#a7f3d0; padding:2px 8px; border-radius:999px; font-size:12px}
+.meta {display:flex; gap:10px; flex-wrap:wrap; font-size:13px; color:#a3bacd}
+
+/* ==== TRIP PLANS PAGE ==== */
+#plansGrid .card-body h3 {margin:0 0 4px; font-size:18px}
+#plansGrid .card-body p {margin:0; color:#cbd5e1; font-size:14px}
+
+
+
+/* ===========================
+   Student 3: Destinations + About
+=========================== */
+
+/* ==== DESTINATIONS PAGE ==== */
+#destinationsGrid .card-body h3 {
+  margin:0 0 4px; font-size:18px; font-weight:700;
+}
+#destinationsGrid .card-body p {
+  margin:0; font-size:14px; color:#cbd5e1;
+}
+
+/* ==== ABOUT PAGE ==== */
+.about-section {
+  max-width:800px; margin:auto; text-align:center; padding:40px 0;
+}
+.about-section h2 {
+  font-size:28px; font-weight:800; margin-bottom:16px;
+}
+.about-section p {
+  color:#cbd5e1; line-height:1.6;
+}
+
